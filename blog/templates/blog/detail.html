@@ -1,8 +1,8 @@
 
 
-<h2>{{ blog.title }}</h2>
-{{ blog.date }}
-<p>{{ blog.content }}</p>
+<h1>{{ blog.title }}</h2>
+<h3>--{{ blog.date|date:'F jS Y'|upper }}--</h3>
+<p>{{ blog.content|safe }}</p>
 
 
 
