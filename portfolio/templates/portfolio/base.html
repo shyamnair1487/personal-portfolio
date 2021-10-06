@@ -14,33 +14,34 @@
     <title>Shyam Nair</title>
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home'%}"><img src="{% static 'portfolio/lfc_icon.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          <span>Shyam Nair</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% static 'portfolio/resume.pdf' %}">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-success" href="{% url 'blog:all_blogs' %}">Blog</a>
-            </li> 
-          </ul>
-          <!-- <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'home'%}"><img src="{% static 'portfolio/lfc_icon.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            <span>Shyam Nair</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% static 'portfolio/resume.pdf' %}">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-success" href="{% url 'blog:all_blogs' %}">Blog</a>
+              </li> 
+            </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
 {% block content %}{% endblock %}
 
