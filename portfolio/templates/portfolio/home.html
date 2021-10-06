@@ -10,7 +10,7 @@
 	<a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
 	<br>
 
-	<img src="{% static 'portfolio/lfc.jpeg' %}" width=45%>
+	<img src="{% static 'portfolio/liverpool-banner.png' %}" width=80%>
 
 	{% for project in projects %}
 
@@ -23,9 +23,11 @@
 	<a href="{{ project.url }}">Link</a>
 	{% endif %}
 	<br>
-</div>
+
 
 
 {% endfor %}
+
+</div>
 
 {% endblock %}
