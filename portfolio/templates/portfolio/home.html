@@ -3,15 +3,16 @@
 {% block content %}
 
 <div class="container">
-	<h1>Shyam Nair's Portfolio</h1>
+	<h1 class="text-center">Shyam Nair's Portfolio</h1>
 	<!-- <a href="{% url 'blog:all_blogs' %}">Blog</a> -->
 	{% load static %}
 
 	<!-- <a href="{% static 'portfolio/resume.pdf' %}">Resume</a> -->
 	<br>
 
-	<img src="{% static 'portfolio/liverpool-banner.png' %}" width=80%>
-
+	<img src="{% static 'portfolio/liverpool-banner.png' %}" class="rounded mx-auto d-block">
+</div>
+<div class="container">
 	{% for project in projects %}
 
 	<h2>{{ project.title }}</h2>
