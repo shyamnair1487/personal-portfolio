@@ -1,10 +1,15 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
 <h1>Shyam Nair's Portfolio</h1>
 <a href="{% url 'blog:all_blogs' %}">Blog</a>
 {% load static %}
 
 <a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
+<br>
 
-<img src="{% static 'portfolio/lfc.png' %}" width=50%>
+<img src="{% static 'portfolio/lfc.jpeg' %}" width=45%>
 
 {% for project in projects %}
 
@@ -21,3 +26,5 @@
 
 
 {% endfor %}
+
+{% endblock %}

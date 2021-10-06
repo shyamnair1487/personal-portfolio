@@ -1,4 +1,6 @@
+{% extends 'portfolio/base.html' %}
 
+{% block content %}
 
 <h1>{{ blog.title }}</h2>
 <h3>--{{ blog.date|date:'F jS Y'|upper }}--</h3>
@@ -6,3 +8,4 @@
 
 
 
+{% endblock %}
