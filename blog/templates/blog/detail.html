@@ -2,9 +2,11 @@
 
 {% block content %}
 
-<h1>{{ blog.title }}</h2>
-<h3>--{{ blog.date|date:'F jS Y'|upper }}--</h3>
-<p>{{ blog.content|safe }}</p>
+<h1 class="text-center mt-5">{{ blog.title }}</h2>
+<h5 class="text-center text-muted mb-5">--{{ blog.date|date:'F jS Y'|upper }}--</h5>
+<div class="container text-break">
+	<p>{{ blog.content|safe }}</p>
+</div>
 
 
 
