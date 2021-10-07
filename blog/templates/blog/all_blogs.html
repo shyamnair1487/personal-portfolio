@@ -2,17 +2,20 @@
 
 {% block content %}
 
-<h1>Blog</h1>
+<h1 class="display-3 text-center">Blog</h1>
 
-<h2>Shyam has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
+<h3 class="text-center">Shyam has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
 
-{% for blog in blogs %}
+<div class="row justify-content-center my-3">
+	<div class="col-md-10">
+		{% for blog in blogs %}
 
-<a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title}}</h3></a>
-<h5>{{ blog.date|date:'D M j Y'|upper }}</h5>
-<p>{{ blog.content|striptags|truncatechars:100 }}</p>
-<br>
+		<a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title}}</h3></a>
+		<h5 class="text-muted">{{ blog.date|date:'M j Y'|upper }}</h5>
+		<h5 class="mb-4">{{ blog.content|striptags|truncatechars:80 }}</h5>
 
-{% endfor %}
 
+		{% endfor %}
+	</div>
+</div>
 {% endblock %}
